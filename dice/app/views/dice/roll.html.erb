@@ -1,12 +1,20 @@
+
 <h1> Dice Game</h1>
-<h2> Welcome.</h2>
-<h3> Here are the rules:</h3>
-<ol><li> Roll the dice to start the game</li>
-	<li> If your first roll is a 7 or 11, you win.</li>
-	<li> If your first roll is a 2, 3, or 12, you lose</li>
-	<li> Anything else becomes your <strong>goal</strong>. Roll your goal again before rolling a 7, and you win. Roll a 7 instead of your goal, and you lose.</li>
-</ol>
+
+<%= @roll1 %>
+<%= @roll2 %>
+<%= @rolled %>
+<%= @play %>
 
 
-<!-- link to button Start game -->
-<%= link_to "Roll to Start Game", roll_url %>
+
+
+
+	<%= image_tag "d0#{@roll1}.png" %>
+	<%= image_tag "d0#{@roll2}.png" %>
+
+
+	<%=  "Your goal is now  " + "#{@roll}".to_s %>
+    <%=  "Now try to get " + " " + "#{@roll}".to_s + " " + "again before you a 7." %>
+
+<%= link_to "Roll Again", dice_roll_url %>

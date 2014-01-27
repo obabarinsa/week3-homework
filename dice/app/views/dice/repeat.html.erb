@@ -1,6 +1,14 @@
 <h1> Dice Game</h1>
 
-<%= @die_image1 %> <%= @die_image2 %>
+<%= @roll1 %>
+<%= @roll2 %>
+<%= @rolled %>
 
-<!-- link to start page Start over -->
-<%= link_to "Roll Again", repeat_url %>
+
+	<%= image_tag "d0#{@roll1}.png" %>
+	<%= image_tag "d0#{@roll2}.png" %>
+
+	<%=  "Your goal is now  " + "#{@roll}.to_s" %>
+ <%=  "Now try to get " + " " + "#{@roll}.to_s" + " " + "again before you a 7." %>
+
+	<%= link_to "Roll Again", dice_repeat_url %>

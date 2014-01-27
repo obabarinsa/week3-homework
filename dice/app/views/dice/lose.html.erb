@@ -1,5 +1,20 @@
-<h1>Dice Game</h1>
 
-<%= @die_image1 %> <%= @die_image2 %>
+<h1> Dice Game</h1>
 
-<%= link_to "Start Over", index_url %>
+<%= @roll1 %>
+<%= @roll2 %>
+<%= @rolled %>
+
+
+
+
+
+	<%= image_tag "d0#{@roll1}.png" %>
+	<%= image_tag "d0#{@roll2}.png" %>
+
+
+		<h2> You Lose </h2>
+
+
+
+# <%= link_to "Start Over", dice_url %>
