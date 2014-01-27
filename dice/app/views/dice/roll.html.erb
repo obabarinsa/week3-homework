@@ -1,20 +1,12 @@
 
 <h1> Dice Game</h1>
 
-<%= @roll1 %>
-<%= @roll2 %>
-<%= @rolled %>
-<%= @play %>
-
-
-
-
-
 	<%= image_tag "d0#{@roll1}.png" %>
 	<%= image_tag "d0#{@roll2}.png" %>
 
-
-	<%=  "Your goal is now  " + "#{@roll}".to_s %>
-    <%=  "Now try to get " + " " + "#{@roll}".to_s + " " + "again before you a 7." %>
+		
+		  <p><%= "Your goal is now  " + points_score.to_s %></p>
+    	  <p><%= "Now try to get " + " " + points_score.to_s + " " + "again before you a 7." %></p>
+    	
 
 <%= link_to "Roll Again", dice_roll_url %>
